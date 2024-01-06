@@ -1,0 +1,121 @@
+<!--Shree Ganeshaye Namah-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="index.css">
+    <!--Box-Icon link-->
+    <link rel="stylesheet" href="boxicons.min.css">
+    <!--Remix-Icon link-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <!--Google-Font link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
+</head>
+<body background="assets/bg.png">
+    <div class="wrapper">
+        <li onclick=showSidebar() class="menuicon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+            height="24" viewBox="0 -960 960 960" width="24">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg></a></li>
+        <div class="mainbar">
+            
+            <button onclick=addnew() class="addnew"><a href="#">ADD NEW</a></button>
+            <button onclick=clearall() class="addnew"><a href="#">DELETE ALL</a></button>
+            <ul class="list">
+                
+                <li class="listitem" id="note1"><button onclick=shown1() class="btn"><a href="#">NOTE 1</a></button></li>
+                <li class="listitem" id="note2"><button onclick=shown2() class="btn"><a href="#">NOTE 2</a></button></li>
+                <li class="listitem" id="note3"><button onclick=shown3() class="btn"><a href="#">NOTE 3</a></button></li>
+                <li class="listitem" id="note4"><button onclick=shown4() class="btn"><a href="#">NOTE 4</a></button></li>
+                <li class="listitem" id="note5"><button onclick=shown5() class="btn"><a href="#">NOTE 5</a></button></li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            
+                        <ul class="list">
+                            
+                            
+                <li class="listitem"  id="note1"><button onclick=shown1() class="btn"><a href="#">NOTE 1</a></button></li>
+                <li class="listitem"  id="note2"><button onclick=shown2() class="btn"><a href="#">NOTE 2</a></button></li>
+                <li class="listitem"  id="note3"><button onclick=shown3() class="btn"><a href="#">NOTE 3</a></button></li>
+                <li class="listitem"  id="note4"><button  onclick=shown4() class="btn"><a href="#">NOTE 4</a></button></li>
+                <li class="listitem"  id="note5"><button onclick=shown5() class="btn"><a href="#">NOTE 5</a></button></li>
+                
+                <li><button onclick=clearall() class="addnew"><a href="#">DELETE ALL</a></button></li>
+                <li><button onclick=addnew() class="addnew"><a href="#">ADD NEW</a></button></li>
+                
+                <li><a href="#" onclick=hideSidebar() class="cross"><svg xmlns="http://www.w3.org/2000/svg" height="34"
+                    viewBox="0 -960 960 960" width="34">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg></a></li>
+            </ul>
+        </div>
+    </div>
+    <img src="NOTEPAD.png" alt="NOTEPAD" class="notepad" height="120px">
+    <textarea class="notehere" name="Notes" id="myTextarea" cols="30" rows="10" placeholder="Start writing here..." ></textarea>
+    <div class="formatting">
+        <ul class="format">
+            <li><button onclick=readOnly() class="fbtn"><svg width="30px" height="30px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <title>ic_fluent_read_only_24_regular</title>
+                <desc>Created with Sketch.</desc>
+                <g id="🔍-System-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="ic_fluent_read_only_24_regular" fill="#212121" fill-rule="nonzero">
+                        <path d="M3.28046,2.21962 L21.7802,20.7198 C22.0731,21.0127 22.0731,21.4875 21.7802,21.7804 C21.4873,22.0733 21.0125,22.0733 20.7196,21.7804 L14,15.0608 L9.0621,19.9987 C8.78522,20.2756 8.44089,20.4754 8.06312,20.5784 L2.94743,21.9736 C2.38756,22.1263 1.87383,21.6126 2.02652,21.0527 L3.42171,15.937 C3.52474,15.5593 3.72456,15.2149 4.00144,14.9381 L8.93944,10.0001 L2.21979,3.28027 C1.9269,2.98737 1.9269,2.5125 2.2198,2.21961 C2.51269,1.92672 2.98757,1.92672 3.28046,2.21962 Z M10.0001,11.0607 L5.0621,15.9987 C4.9928825,16.067925 4.93811,16.1498063 4.90056266,16.2395344 L4.86886,16.3317 L3.81901,20.1811 L7.66845,19.1313 C7.76289,19.105575 7.85106375,19.061625 7.92818297,19.0023609 L8.00144,18.9381 L12.9392,13.9999 L10.0001,11.0607 Z M15.9698,2.96973 C17.3672,1.57227 19.633,1.57227 21.0304,2.96973 C22.3779893,4.31728071 22.4261175,6.47219893 21.1747846,7.87741875 L21.0304,8.03039 L16.1207,12.9401 L15.0598,11.8793 L17.9393,8.99963 L15.0003,6.06063 L12.1207,8.94013 L11.0601,7.87943 L15.9698,2.96973 Z M17.0304,4.03039 L16.0603,4.99963 L18.9993,7.93963 L19.9698,6.96973 C20.7814,6.15805 20.7814,4.84206 19.9698,4.03039 C19.1581,3.21871 17.8421,3.21871 17.0304,4.03039 Z" id="🎨-Color">
+            
+            </path>
+                    </g>
+                </g>
+            </svg></button></li>
+            <li><button onclick=writeOnly() class="fbtn"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 22C1 21.4477 1.44772 21 2 21H22C22.5523 21 23 21.4477 23 22C23 22.5523 22.5523 23 22 23H2C1.44772 23 1 22.5523 1 22Z" fill="#0F0F0F"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3056 1.87868C17.1341 0.707107 15.2346 0.707107 14.063 1.87868L3.38904 12.5526C2.9856 12.9561 2.70557 13.4662 2.5818 14.0232L2.04903 16.4206C1.73147 17.8496 3.00627 19.1244 4.43526 18.8069L6.83272 18.2741C7.38969 18.1503 7.89981 17.8703 8.30325 17.4669L18.9772 6.79289C20.1488 5.62132 20.1488 3.72183 18.9772 2.55025L18.3056 1.87868ZM15.4772 3.29289C15.8677 2.90237 16.5009 2.90237 16.8914 3.29289L17.563 3.96447C17.9535 4.35499 17.9535 4.98816 17.563 5.37868L15.6414 7.30026L13.5556 5.21448L15.4772 3.29289ZM12.1414 6.62869L4.80325 13.9669C4.66877 14.1013 4.57543 14.2714 4.53417 14.457L4.0014 16.8545L6.39886 16.3217C6.58452 16.2805 6.75456 16.1871 6.88904 16.0526L14.2272 8.71448L12.1414 6.62869Z" fill="#0F0F0F"/>
+                </svg></button></li>
+                <li><button  onclick=black() class="fbtn" id="black"></button></li>
+            <li><button onclick=blue() class="fbtn" id="blue"></button></li>
+            <li><button  onclick=green() class="fbtn" id="green"></button></li>
+            <li><button onclick=yellow() class="fbtn" id="yellow"></button></li>
+            <li><button  onclick=red() class="fbtn" id="red"></button></li>
+            <li><button  onclick=bold() class="fbtn"><svg height="25px" viewBox="0 0 1792 1792" width="25px" xmlns="http://www.w3.org/2000/svg"><path d="M747 1521q74 32 140 32 376 0 376-335 0-114-41-180-27-44-61.5-74t-67.5-46.5-80.5-25-84-10.5-94.5-2q-73 0-101 10 0 53-.5 159t-.5 158q0 8-1 67.5t-.5 96.5 4.5 83.5 12 66.5zm-14-746q42 7 109 7 82 0 143-13t110-44.5 74.5-89.5 25.5-142q0-70-29-122.5t-79-82-108-43.5-124-14q-50 0-130 13 0 50 4 151t4 152q0 27-.5 80t-.5 79q0 46 1 69zm-541 889l2-94q15-4 85-16t106-27q7-12 12.5-27t8.5-33.5 5.5-32.5 3-37.5.5-34v-65.5q0-982-22-1025-4-8-22-14.5t-44.5-11-49.5-7-48.5-4.5-30.5-3l-4-83q98-2 340-11.5t373-9.5q23 0 68.5.5t67.5.5q70 0 136.5 13t128.5 42 108 71 74 104.5 28 137.5q0 52-16.5 95.5t-39 72-64.5 57.5-73 45-84 40q154 35 256.5 134t102.5 248q0 100-35 179.5t-93.5 130.5-138 85.5-163.5 48.5-176 14q-44 0-132-3t-132-3q-106 0-307 11t-231 12z"/></svg></button></li>
+                
+            <li><button  onclick=italic() class="fbtn"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#292d32" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m9.62012 3h9.24998"/><path d="m5.12012 21h9.24998"/><path d="m14.25 3-4.5 18"/></g></svg></button></li>
+           
+            <li><button onclick=underline() class="fbtn"><svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 5V11C16 13.2091 14.2091 15 12 15V15C9.79086 15 8 13.2091 8 11V5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 19L18 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></button></li>
+                 <li><button onclick=save() class="fbtn"><svg width="30px" height="30px" viewBox="0 -0.5 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+                <title>save_item [#1411]</title>
+                <desc>Created with Sketch.</desc>
+                <defs>
+            
+            </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Dribbble-Light-Preview" transform="translate(-419.000000, -640.000000)" fill="#000000">
+                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                            <path d="M370.21875,484 C370.21875,483.448 370.68915,483 371.26875,483 C371.84835,483 372.31875,483.448 372.31875,484 C372.31875,484.552 371.84835,485 371.26875,485 C370.68915,485 370.21875,484.552 370.21875,484 L370.21875,484 Z M381.9,497 C381.9,497.552 381.4296,498 380.85,498 L379.8,498 L379.8,494 C379.8,492.895 378.86025,492 377.7,492 L369.3,492 C368.13975,492 367.2,492.895 367.2,494 L367.2,498 L366.15,498 C365.5704,498 365.1,497.552 365.1,497 L365.1,487.044 C365.1,486.911 365.15565,486.784 365.2533,486.691 L367.2,484.837 L367.2,486 C367.2,487.105 368.13975,488 369.3,488 L377.7,488 C378.86025,488 379.8,487.105 379.8,486 L379.8,482 L380.85,482 C381.4296,482 381.9,482.448 381.9,483 L381.9,497 Z M377.7,498 L369.3,498 L369.3,495 C369.3,494.448 369.7704,494 370.35,494 L376.65,494 C377.2296,494 377.7,494.448 377.7,495 L377.7,498 Z M369.3,482.837 L370.17885,482 L377.7,482 L377.7,485 C377.7,485.552 377.2296,486 376.65,486 L370.35,486 C369.7704,486 369.3,485.552 369.3,485 L369.3,482.837 Z M381.9,480 L369.7347,480 C369.45645,480 369.18975,480.105 368.99235,480.293 L363.30765,485.707 C363.11025,485.895 363,486.149 363,486.414 L363,498 C363,499.105 363.93975,500 365.1,500 L381.9,500 C383.06025,500 384,499.105 384,498 L384,482 C384,480.895 383.06025,480 381.9,480 L381.9,480 Z" id="save_item-[#1411]">
+            
+            </path>
+                        </g>
+                    </g>
+                </g>
+            </svg></button></li>
+            
+            
+            
+        </ul>
+    </div>
+    <!--Custom JS Link-->
+    <script src="index.js"></script>
+</body>
+</html>
